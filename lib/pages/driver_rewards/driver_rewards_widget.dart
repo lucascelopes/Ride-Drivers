@@ -97,7 +97,7 @@ class _DriverRewardsWidgetState extends State<DriverRewardsWidget> {
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          16.0, 20.0, 16.0, 20.0),
+                          16.0, 20.0, 16.0, 60.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -794,8 +794,32 @@ class _DriverRewardsWidgetState extends State<DriverRewardsWidget> {
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: valueOrDefault<Color>(
+                                            () {
+                                              if ((currentUserDocument?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Taxi')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              } else if ((currentUserDocument
+                                                          ?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Driver')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .primary;
+                                              } else {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              }
+                                            }(),
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
+                                          ),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
@@ -1566,8 +1590,32 @@ class _DriverRewardsWidgetState extends State<DriverRewardsWidget> {
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: valueOrDefault<Color>(
+                                            () {
+                                              if ((currentUserDocument?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Taxi')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              } else if ((currentUserDocument
+                                                          ?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Driver')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .primary;
+                                              } else {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              }
+                                            }(),
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
+                                          ),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
@@ -2056,8 +2104,33 @@ class _DriverRewardsWidgetState extends State<DriverRewardsWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .alternate,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .alternate,
+                                            ),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,

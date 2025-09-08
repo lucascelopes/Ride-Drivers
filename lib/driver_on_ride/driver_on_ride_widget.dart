@@ -133,7 +133,7 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                         apiKey: 'AIzaSyCFBfcNHFg97sM7EhKnAP4OHIoY3Q8Y_xQ',
                         arrivalRadiusMeters: 30.0,
                         simulateIfNoGPS: false,
-                        useDeviceCompass: true,
+                        useDeviceCompass: false,
                         userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
                         initialDriverLatLng: currentUserDocument?.location,
                         placeLatLng: driverOnRideRideOrdersRecord.latlng!,

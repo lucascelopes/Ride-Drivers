@@ -204,30 +204,32 @@ class _CreateProfileDriverWidgetState extends State<CreateProfileDriverWidget> {
                             ),
                             child: Stack(
                               children: [
-                                Container(
-                                  width: 200.0,
-                                  height: 200.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
+                                if (_model.uploadedFileUrl_uploadDataJdh == '')
+                                  Container(
+                                    width: 200.0,
+                                    height: 200.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      '',
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                  child: Image.network(
-                                    '',
-                                    fit: BoxFit.cover,
+                                if (_model.uploadedFileUrl_uploadDataJdh != '')
+                                  Container(
+                                    width: 200.0,
+                                    height: 200.0,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.network(
+                                      _model.uploadedFileUrl_uploadDataJdh,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  width: 200.0,
-                                  height: 200.0,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Image.network(
-                                    _model.uploadedFileUrl_uploadDataJdh,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
                               ],
                             ),
                           ),
@@ -2090,7 +2092,7 @@ class _CreateProfileDriverWidgetState extends State<CreateProfileDriverWidget> {
                                 ...mapToFirestore(
                                   {
                                     'plaform':
-                                        FieldValue.arrayUnion(['Ride Taxi']),
+                                        FieldValue.arrayUnion(['Ride Driver']),
                                   },
                                 ),
                               });

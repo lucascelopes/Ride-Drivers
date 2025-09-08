@@ -193,8 +193,28 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                     width: double.infinity,
                                     height: 378.0,
                                     decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .alternate,
+                                      color: valueOrDefault<Color>(
+                                        () {
+                                          if ((currentUserDocument?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Taxi')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .alternate;
+                                          } else if ((currentUserDocument
+                                                      ?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Driver')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .primary;
+                                          } else {
+                                            return FlutterFlowTheme.of(context)
+                                                .alternate;
+                                          }
+                                        }(),
+                                        FlutterFlowTheme.of(context).alternate,
+                                      ),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
@@ -233,9 +253,34 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
                                                                 fontSize: 18.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -261,9 +306,35 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                               width: 350.0,
                                               height: 70.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                                color: valueOrDefault<Color>(
+                                                  () {
+                                                    if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Taxi')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .primary;
+                                                    } else if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Driver')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .alternate;
+                                                    } else {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .primary;
+                                                    }
+                                                  }(),
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                                ),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
@@ -312,9 +383,22 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                             .bodyMedium
                                                                             .fontStyle,
                                                                       ),
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
+                                                                      color: valueOrDefault<
+                                                                          Color>(
+                                                                        () {
+                                                                          if ((currentUserDocument?.plaform.toList() ?? []).contains(
+                                                                              'Ride Taxi')) {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          } else if ((currentUserDocument?.plaform.toList() ?? [])
+                                                                              .contains('Ride Driver')) {
+                                                                            return FlutterFlowTheme.of(context).primary;
+                                                                          } else {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          }
+                                                                        }(),
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
                                                                       fontWeight:
@@ -345,9 +429,31 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   letterSpacing:
                                                                       0.0,
                                                                   fontWeight:
@@ -387,9 +493,34 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryText,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight: FlutterFlowTheme.of(
@@ -407,9 +538,38 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                           height: 26.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
+                                                            color:
+                                                                valueOrDefault<
+                                                                    Color>(
+                                                              () {
+                                                                if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Taxi')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate;
+                                                                } else if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Driver')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary;
+                                                                } else {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate;
+                                                                }
+                                                              }(),
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .alternate,
+                                                            ),
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
@@ -474,7 +634,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        16.0, 0.0, 16.0, 0.0),
+                                                        16.0, 0.0, 16.0, 8.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -516,9 +676,22 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                             .bodyMedium
                                                                             .fontStyle,
                                                                       ),
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
+                                                                      color: valueOrDefault<
+                                                                          Color>(
+                                                                        () {
+                                                                          if ((currentUserDocument?.plaform.toList() ?? []).contains(
+                                                                              'Ride Taxi')) {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          } else if ((currentUserDocument?.plaform.toList() ?? [])
+                                                                              .contains('Ride Driver')) {
+                                                                            return FlutterFlowTheme.of(context).primary;
+                                                                          } else {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          }
+                                                                        }(),
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
                                                                       fontWeight:
@@ -549,9 +722,31 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   letterSpacing:
                                                                       0.0,
                                                                   fontWeight:
@@ -591,9 +786,34 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryText,
+                                                                ),
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight: FlutterFlowTheme.of(
@@ -605,6 +825,82 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                               ),
+                                                        ),
+                                                        Container(
+                                                          width: 80.0,
+                                                          height: 26.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color:
+                                                                valueOrDefault<
+                                                                    Color>(
+                                                              () {
+                                                                if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Taxi')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate;
+                                                                } else if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Driver')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary;
+                                                                } else {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate;
+                                                                }
+                                                              }(),
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .alternate,
+                                                            ),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        24.0),
+                                                          ),
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Text(
+                                                            'View',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .poppins(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                          ),
                                                         ),
                                                       ].divide(SizedBox(
                                                           height: 4.0)),
@@ -718,9 +1014,22 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                             .bodyMedium
                                                                             .fontStyle,
                                                                       ),
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
+                                                                      color: valueOrDefault<
+                                                                          Color>(
+                                                                        () {
+                                                                          if ((currentUserDocument?.plaform.toList() ?? []).contains(
+                                                                              'Ride Taxi')) {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          } else if ((currentUserDocument?.plaform.toList() ?? [])
+                                                                              .contains('Ride Driver')) {
+                                                                            return FlutterFlowTheme.of(context).primary;
+                                                                          } else {
+                                                                            return FlutterFlowTheme.of(context).secondaryText;
+                                                                          }
+                                                                        }(),
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                      ),
                                                                       letterSpacing:
                                                                           0.0,
                                                                       fontWeight:
@@ -751,9 +1060,31 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
@@ -810,9 +1141,29 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                           .bodyMedium
                                                                           .fontStyle,
                                                                     ),
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .alternate,
+                                                                    color: valueOrDefault<
+                                                                        Color>(
+                                                                      () {
+                                                                        if ((currentUserDocument?.plaform.toList() ??
+                                                                                [])
+                                                                            .contains(
+                                                                                'Ride Taxi')) {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .alternate;
+                                                                        } else if ((currentUserDocument?.plaform.toList() ??
+                                                                                [])
+                                                                            .contains('Ride Driver')) {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .primary;
+                                                                        } else {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .alternate;
+                                                                        }
+                                                                      }(),
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate,
+                                                                    ),
                                                                     letterSpacing:
                                                                         0.0,
                                                                     fontWeight:
@@ -881,9 +1232,31 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                 height: 18.0,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   borderRadius:
                                                                       BorderRadius
                                                                           .circular(
@@ -906,6 +1279,20 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                                           fontStyle: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .fontStyle,
+                                                                        ),
+                                                                        color: valueOrDefault<
+                                                                            Color>(
+                                                                          () {
+                                                                            if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Taxi')) {
+                                                                              return FlutterFlowTheme.of(context).primaryText;
+                                                                            } else if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Driver')) {
+                                                                              return FlutterFlowTheme.of(context).alternate;
+                                                                            } else {
+                                                                              return FlutterFlowTheme.of(context).primaryText;
+                                                                            }
+                                                                          }(),
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .primaryText,
                                                                         ),
                                                                         fontSize:
                                                                             10.0,
@@ -962,9 +1349,34 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                             width: 170.0,
                                             height: 50.0,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: valueOrDefault<Color>(
+                                                () {
+                                                  if ((currentUserDocument
+                                                              ?.plaform
+                                                              .toList() ??
+                                                          [])
+                                                      .contains('Ride Taxi')) {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary;
+                                                  } else if ((currentUserDocument
+                                                              ?.plaform
+                                                              .toList() ??
+                                                          [])
+                                                      .contains(
+                                                          'Ride Driver')) {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondary;
+                                                  } else {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary;
+                                                  }
+                                                }(),
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16.0),
                                             ),
@@ -985,9 +1397,37 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .alternate,
+                                                    color:
+                                                        valueOrDefault<Color>(
+                                                      () {
+                                                        if ((currentUserDocument
+                                                                    ?.plaform
+                                                                    .toList() ??
+                                                                [])
+                                                            .contains(
+                                                                'Ride Taxi')) {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate;
+                                                        } else if ((currentUserDocument
+                                                                    ?.plaform
+                                                                    .toList() ??
+                                                                [])
+                                                            .contains(
+                                                                'Ride Driver')) {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary;
+                                                        } else {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate;
+                                                        }
+                                                      }(),
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .alternate,
+                                                    ),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
@@ -1013,9 +1453,34 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                             width: 170.0,
                                             height: 50.0,
                                             decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                              color: valueOrDefault<Color>(
+                                                () {
+                                                  if ((currentUserDocument
+                                                              ?.plaform
+                                                              .toList() ??
+                                                          [])
+                                                      .contains('Ride Taxi')) {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary;
+                                                  } else if ((currentUserDocument
+                                                              ?.plaform
+                                                              .toList() ??
+                                                          [])
+                                                      .contains(
+                                                          'Ride Driver')) {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondary;
+                                                  } else {
+                                                    return FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary;
+                                                  }
+                                                }(),
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16.0),
                                             ),
@@ -1036,9 +1501,37 @@ class _CalendarWidgetState extends State<CalendarWidget> {
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .alternate,
+                                                    color:
+                                                        valueOrDefault<Color>(
+                                                      () {
+                                                        if ((currentUserDocument
+                                                                    ?.plaform
+                                                                    .toList() ??
+                                                                [])
+                                                            .contains(
+                                                                'Ride Taxi')) {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate;
+                                                        } else if ((currentUserDocument
+                                                                    ?.plaform
+                                                                    .toList() ??
+                                                                [])
+                                                            .contains(
+                                                                'Ride Driver')) {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary;
+                                                        } else {
+                                                          return FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate;
+                                                        }
+                                                      }(),
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .alternate,
+                                                    ),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,

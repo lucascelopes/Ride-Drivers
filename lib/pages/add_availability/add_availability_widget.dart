@@ -317,7 +317,23 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                           width: double.infinity,
                           height: 566.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: valueOrDefault<Color>(
+                              () {
+                                if ((currentUserDocument?.plaform.toList() ??
+                                        [])
+                                    .contains('Ride Taxi')) {
+                                  return FlutterFlowTheme.of(context).alternate;
+                                } else if ((currentUserDocument?.plaform
+                                            .toList() ??
+                                        [])
+                                    .contains('Ride Driver')) {
+                                  return FlutterFlowTheme.of(context).primary;
+                                } else {
+                                  return FlutterFlowTheme.of(context).alternate;
+                                }
+                              }(),
+                              FlutterFlowTheme.of(context).alternate,
+                            ),
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
@@ -341,8 +357,33 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -361,7 +402,26 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                     width: 350.0,
                                     height: 44.29,
                                     decoration: BoxDecoration(
-                                      color: Color(0x2DCACACA),
+                                      color: valueOrDefault<Color>(
+                                        () {
+                                          if ((currentUserDocument?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Taxi')) {
+                                            return Color(0xD2CACACA);
+                                          } else if ((currentUserDocument
+                                                      ?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Driver')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .primaryText;
+                                          } else {
+                                            return Color(0xD2CACACA);
+                                          }
+                                        }(),
+                                        Color(0xD2CACACA),
+                                      ),
                                       borderRadius: BorderRadius.circular(18.0),
                                     ),
                                     child: Padding(
@@ -1100,8 +1160,33 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -1350,8 +1435,33 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -1421,9 +1531,35 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                             .labelMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                   fontStyle:
@@ -1481,6 +1617,35 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
+                                                color: valueOrDefault<Color>(
+                                                  () {
+                                                    if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Taxi')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .primary;
+                                                    } else if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Driver')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .alternate;
+                                                    } else {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .primary;
+                                                    }
+                                                  }(),
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                                ),
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
                                                 fontStyle:
@@ -1515,8 +1680,33 @@ class _AddAvailabilityWidgetState extends State<AddAvailabilityWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 15.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,

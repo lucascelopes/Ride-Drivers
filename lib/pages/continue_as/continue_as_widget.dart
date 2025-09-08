@@ -208,35 +208,7 @@ class _ContinueAsWidgetState extends State<ContinueAsWidget>
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    'Autolocation',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.poppins(
-                                            fontWeight: FontWeight.normal,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xBFF1F4F8),
-                                          fontSize: 10.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.normal,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                            children: [],
                           ),
                         ],
                       ),
@@ -388,7 +360,7 @@ class _ContinueAsWidgetState extends State<ContinueAsWidget>
                                         ),
                                         child: Checkbox(
                                           value: _model.checkboxValue1 ??=
-                                              _model.eusou == 'im a driver',
+                                              _model.eusou != 'im a driver',
                                           onChanged: (_model.eusou ==
                                                   'im a driver')
                                               ? null
@@ -588,7 +560,7 @@ class _ContinueAsWidgetState extends State<ContinueAsWidget>
                                         ),
                                         child: Checkbox(
                                           value: _model.checkboxValue2 ??=
-                                              _model.eusou ==
+                                              _model.eusou !=
                                                   'im a taxi driver',
                                           onChanged: (_model.eusou ==
                                                   'im a taxi driver')
@@ -731,8 +703,13 @@ class _ContinueAsWidgetState extends State<ContinueAsWidget>
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context
-                                    .pushNamed(CreateProfileWidget.routeName);
+                                if (_model.eusou == 'im a driver') {
+                                  context.pushNamed(
+                                      CreateProfileDriverWidget.routeName);
+                                } else {
+                                  context
+                                      .pushNamed(CreateProfileWidget.routeName);
+                                }
                               },
                               child: Container(
                                 width: 280.0,

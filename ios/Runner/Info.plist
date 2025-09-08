@@ -18,63 +18,41 @@
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
     <string>$(FLUTTER_BUILD_NAME)</string>
-    <key>CFBundleSignature</key>
-    <string>????</string>
-    <!-- OPTIONAL: iOS Google Maps key here (ou injete via AppDelegate) -->
-    <key>GMSApiKey</key>
-    <string>AIzaSyCFBfcNHFg97sM7EhKnAP4OHIoY3Q8Y_xQ</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>com.googleusercontent.apps.1075126726259-9ntnnueg9ksl8a9geqroflp5qgf32hd1</string>
-        </array>
-      </dict>
-      <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-        <key>CFBundleURLName</key>
-        <string>ridefordrivers.com</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>ridefordrivers</string>
-        </array>
-      </dict>
-    </array>
-    <key>FlutterDeepLinkingEnabled</key>
-    <true/>
     <key>CFBundleVersion</key>
     <string>$(FLUTTER_BUILD_NUMBER)</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
-    <!-- Allow checking if Google Maps app is installed -->
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-      <string>comgooglemaps</string>
-    </array>
-    <!-- **** LOCATION PERMISSIONS (English) ****
-         Needed for GPS + heading (compass via CoreLocation) while app is in use. -->
+    <!-- Google Maps/Navigation API Key (recomendo rotacionar e restringir por Bundle ID) -->
+    <key>GMSApiKey</key>
+    <string>***SUA_API_KEY_RESTRITA***</string>
+    <!-- Permissões de localização (as 3 — Always é legacy mas ainda ajuda em aparelhos antigos) -->
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We use your location and heading to provide turn-by-turn navigation and rotate the map as you drive.</string>
-    <!-- Helps iOS 13+ present the “Allow While Using App” dialog properly.
-         You are NOT requesting background updates; just better clarity. -->
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>We use your location and heading to provide turn-by-turn navigation and rotate the map as you drive.</string>
-    <!-- Optional legacy key (pre-iOS 11). Safe to include. -->
     <key>NSLocationAlwaysUsageDescription</key>
     <string>We use your location and heading to provide turn-by-turn navigation and rotate the map as you drive.</string>
-    <!-- Camera / Photos (se você usa em outras telas) -->
+    <!-- Background Modes: navegação contínua (voz + updates) -->
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>location</string>
+      <string>audio</string>
+    </array>
+    <!-- iOS 14+: precisão temporária (se pedir requestTemporaryFullAccuracyAuthorization) -->
+    <key>NSLocationTemporaryUsageDescriptionDictionary</key>
+    <dict>
+      <key>Navigation</key>
+      <string>We need precise location temporarily to provide accurate turn-by-turn guidance.</string>
+    </dict>
+    <!-- Outras permissões que você já usa -->
     <key>NSCameraUsageDescription</key>
     <string>To take a picture or video, we need access to the camera.</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>To upload data, we need access to your photo library.</string>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
-    <key>UIMainStoryboardFile</key>
-    <string>Main</string>
+    <!-- Se você NÃO usa storyboard "Main", pode remover -->
+    <!-- <key>UIMainStoryboardFile</key><string>Main</string> -->
     <key>UISupportedInterfaceOrientations</key>
     <array>
       <string>UIInterfaceOrientationPortrait</string>
@@ -88,6 +66,8 @@
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>FlutterDeepLinkingEnabled</key>
+    <true/>
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>
   </dict>
