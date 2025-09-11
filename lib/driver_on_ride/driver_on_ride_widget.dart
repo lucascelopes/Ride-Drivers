@@ -135,6 +135,7 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                       width: double.infinity,
                       height: double.infinity,
                       child: custom_widgets.NativeTurnByTurnNav(
+                        apiKey: 'AIzaSyCxq0iBKdwc2F7SdBnYCzMhC-nXIMIEyyU',
                         userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
                         placeLatLng: driverOnRideRideOrdersRecord.latlng!,
                         width: double.infinity,
