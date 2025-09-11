@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
+
 import 'driver_on_ride_model.dart';
 export 'driver_on_ride_model.dart';
 
@@ -35,14 +36,15 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
     super.initState();
     _model = createModel(context, () => DriverOnRideModel());
 
-    getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0), cached: true)
-        .then((loc) => safeSetState(() => currentUserLocationValue = loc));
+    getCurrentUserLocation(
+      defaultLocation: const LatLng(0.0, 0.0),
+      cached: true,
+    ).then((loc) => safeSetState(() => currentUserLocationValue = loc));
   }
 
   @override
   void dispose() {
     _model.dispose();
-
     super.dispose();
   }
 
@@ -68,7 +70,6 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
     return StreamBuilder<RideOrdersRecord>(
       stream: RideOrdersRecord.getDocument(widget.driverOrder!),
       builder: (context, snapshot) {
-        // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
             backgroundColor: FlutterFlowTheme.of(context).tertiary,
@@ -99,13 +100,14 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
             backgroundColor: FlutterFlowTheme.of(context).tertiary,
             body: Stack(
               children: [
+                // Mapa "fantasma" do FlutterFlow (mantém compatibilidade/gestos se você precisar)
                 Opacity(
                   opacity: 0.0,
                   child: FlutterFlowGoogleMap(
                     controller: _model.googleMapsController,
                     onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
                     initialLocation: _model.googleMapsCenter ??=
-                        LatLng(13.106061, -59.613158),
+                        const LatLng(13.106061, -59.613158),
                     markerColor: GoogleMarkerColor.violet,
                     mapType: MapType.normal,
                     style: GoogleMapStyle.standard,
@@ -121,21 +123,31 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                     mapTakesGesturePreference: false,
                   ),
                 ),
+
+                // === AQUI entra o widget nativo ===
                 PointerInterceptor(
                   intercepting: isWeb,
                   child: AuthUserStreamWidget(
-                    builder: (context) => Container(
+                    builder: (context) => SizedBox(
                       width: double.infinity,
                       height: double.infinity,
-                      child: custom_widgets.TurnByTurnNav(
+                      child: custom_widgets.NativeTurnByTurnNav(
+                        // dimensões
                         width: double.infinity,
                         height: double.infinity,
+
+                        // config
                         apiKey: 'AIzaSyCFBfcNHFg97sM7EhKnAP4OHIoY3Q8Y_xQ',
                         arrivalRadiusMeters: 30.0,
                         simulateIfNoGPS: false,
                         useDeviceCompass: true,
+
+                        // pontos da corrida
+                        // userLatLng = origem/pickup (no seu modelo: latlngAtual)
                         userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
+                        // posição inicial do driver (se existir no user doc)
                         initialDriverLatLng: currentUserDocument?.location,
+                        // destino
                         placeLatLng: driverOnRideRideOrdersRecord.latlng!,
                       ),
                     ),
