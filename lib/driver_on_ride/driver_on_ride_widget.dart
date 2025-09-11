@@ -3,6 +3,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_google_map.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -134,38 +135,11 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                       width: double.infinity,
                       height: double.infinity,
                       child: custom_widgets.NativeTurnByTurnNav(
-                        // dimensões
+                        userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
+                        placeLatLng: driverOnRideRideOrdersRecord.latlng!,
                         width: double.infinity,
                         height: double.infinity,
-
-                        // config
-                        apiKey: 'AIzaSyCFBfcNHFg97sM7EhKnAP4OHIoY3Q8Y_xQ',
-                        arrivalRadiusMeters: 30.0,
-                        simulateIfNoGPS: false,
-                        useDeviceCompass: true,
-
-                        // pontos da corrida
-                        // userLatLng = origem/pickup (no seu modelo: latlngAtual)
-                        userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
-                        // posição inicial do driver (se existir no user doc)
-                        initialDriverLatLng: currentUserDocument?.location,
-                        // destino
-                        placeLatLng: driverOnRideRideOrdersRecord.latlng!,
                       ),
-                AuthUserStreamWidget(
-                  builder: (context) => Container(
-                    width: double.infinity,
-                    height: double.infinity,
-                    child: custom_widgets.TurnByTurnNav(
-                      width: double.infinity,
-                      height: double.infinity,
-                      apiKey: 'AIzaSyCFBfcNHFg97sM7EhKnAP4OHIoY3Q8Y_xQ',
-                      arrivalRadiusMeters: 30.0,
-                      simulateIfNoGPS: false,
-                      useDeviceCompass: false,
-                      userLatLng: driverOnRideRideOrdersRecord.latlngAtual!,
-                      initialDriverLatLng: currentUserDocument?.location,
-                      placeLatLng: driverOnRideRideOrdersRecord.latlng!,
                     ),
                   ),
                 ),
