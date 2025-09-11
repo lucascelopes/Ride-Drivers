@@ -323,7 +323,23 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                           width: double.infinity,
                           height: 590.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).alternate,
+                            color: valueOrDefault<Color>(
+                              () {
+                                if ((currentUserDocument?.plaform.toList() ??
+                                        [])
+                                    .contains('Ride Taxi')) {
+                                  return FlutterFlowTheme.of(context).alternate;
+                                } else if ((currentUserDocument?.plaform
+                                            .toList() ??
+                                        [])
+                                    .contains('Ride Driver')) {
+                                  return FlutterFlowTheme.of(context).primary;
+                                } else {
+                                  return FlutterFlowTheme.of(context).alternate;
+                                }
+                              }(),
+                              FlutterFlowTheme.of(context).alternate,
+                            ),
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
@@ -347,8 +363,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -525,8 +566,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -679,8 +745,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -837,8 +928,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -996,8 +1112,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -1446,8 +1587,33 @@ class _ScheduleRideWidgetState extends State<ScheduleRideWidget> {
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .alternate;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             fontSize: 15.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,

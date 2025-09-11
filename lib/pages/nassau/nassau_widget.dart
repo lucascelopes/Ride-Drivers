@@ -551,9 +551,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 14.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
@@ -581,9 +607,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .tertiary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .tertiary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
@@ -643,9 +695,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 14.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
@@ -673,9 +751,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .tertiary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .tertiary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
@@ -851,9 +955,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                 width: 40.0,
                                                 height: 24.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .alternate,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                                  ),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           16.0),
@@ -944,9 +1074,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                 width: 47.0,
                                                 height: 24.0,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .alternate,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                                  ),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           16.0),
@@ -1123,9 +1279,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                     size: 24.0,
                                                   ),
                                                   fillColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .alternate,
+                                                      valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .alternate,
+                                                  ),
                                                   elevation: 2.0,
                                                   borderColor:
                                                       Colors.transparent,
@@ -1200,9 +1382,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                               width: 100.0,
                                               height: 24.0,
                                               decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .alternate,
+                                                color: valueOrDefault<Color>(
+                                                  () {
+                                                    if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Taxi')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .alternate;
+                                                    } else if ((currentUserDocument
+                                                                ?.plaform
+                                                                .toList() ??
+                                                            [])
+                                                        .contains(
+                                                            'Ride Driver')) {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .secondary;
+                                                    } else {
+                                                      return FlutterFlowTheme
+                                                              .of(context)
+                                                          .alternate;
+                                                    }
+                                                  }(),
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                                ),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
@@ -1319,9 +1527,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
@@ -1356,9 +1590,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
@@ -1382,9 +1642,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w800,
@@ -1993,8 +2279,20 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                               .bodyMedium
                                                                               .fontStyle,
                                                                         ),
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primary,
+                                                                        color: valueOrDefault<
+                                                                            Color>(
+                                                                          () {
+                                                                            if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Taxi')) {
+                                                                              return FlutterFlowTheme.of(context).primary;
+                                                                            } else if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Driver')) {
+                                                                              return FlutterFlowTheme.of(context).alternate;
+                                                                            } else {
+                                                                              return FlutterFlowTheme.of(context).primary;
+                                                                            }
+                                                                          }(),
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .primary,
+                                                                        ),
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:
@@ -2018,8 +2316,20 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                               .bodyMedium
                                                                               .fontStyle,
                                                                         ),
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primary,
+                                                                        color: valueOrDefault<
+                                                                            Color>(
+                                                                          () {
+                                                                            if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Taxi')) {
+                                                                              return FlutterFlowTheme.of(context).primary;
+                                                                            } else if ((currentUserDocument?.plaform.toList() ?? []).contains('Ride Driver')) {
+                                                                              return FlutterFlowTheme.of(context).secondaryText;
+                                                                            } else {
+                                                                              return FlutterFlowTheme.of(context).primary;
+                                                                            }
+                                                                          }(),
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .primary,
+                                                                        ),
                                                                         fontSize:
                                                                             10.0,
                                                                         letterSpacing:
@@ -2063,6 +2373,34 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
                                                                 fontSize: 16.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -2084,9 +2422,35 @@ class _NassauWidgetState extends State<NassauWidget>
                                                 width: 301.4,
                                                 height: 52.23,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondary;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           12.0),
@@ -2102,15 +2466,38 @@ class _NassauWidgetState extends State<NassauWidget>
                                                         MainAxisAlignment
                                                             .spaceBetween,
                                                     children: [
-                                                      Text(
-                                                        'Earning now',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(
+                                                      Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          if ((currentUserDocument
+                                                                      ?.plaform
+                                                                      .toList() ??
+                                                                  [])
+                                                              .contains(
+                                                                  'Ride Driver'))
+                                                            Text(
+                                                              ' Earning now \$5.60',
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    font: GoogleFonts
+                                                                        .poppins(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -2120,32 +2507,82 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .secondaryText,
-                                                                  fontSize:
-                                                                      10.0,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                      ),
-                                                      Text(
-                                                        '\$1.50 / km',
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(
+                                                            ),
+                                                          if ((currentUserDocument
+                                                                      ?.plaform
+                                                                      .toList() ??
+                                                                  [])
+                                                              .contains(
+                                                                  'Ride Taxi'))
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          25.0,
+                                                                          0.0),
+                                                              child: Text(
+                                                                'Earning now',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      font: GoogleFonts
+                                                                          .poppins(
+                                                                        fontWeight: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontWeight,
+                                                                        fontStyle: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .fontStyle,
+                                                                      ),
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          10.0,
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          if ((currentUserDocument
+                                                                      ?.plaform
+                                                                      .toList() ??
+                                                                  [])
+                                                              .contains(
+                                                                  'Ride Taxi'))
+                                                            Text(
+                                                              '\$1.50 / km',
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    font: GoogleFonts
+                                                                        .poppins(
+                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontWeight,
+                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .fontStyle,
+                                                                    ),
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -2155,20 +2592,8 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
+                                                            ),
+                                                        ],
                                                       ),
                                                       Column(
                                                         mainAxisSize:
@@ -2263,10 +2688,37 @@ class _NassauWidgetState extends State<NassauWidget>
                                                       width: 70.0,
                                                       height: 40.0,
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
+                                                        color: valueOrDefault<
+                                                            Color>(
+                                                          () {
+                                                            if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Taxi')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Driver')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryText;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            }
+                                                          }(),
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
@@ -2292,9 +2744,31 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   fontSize:
                                                                       12.0,
                                                                   letterSpacing:
@@ -2314,10 +2788,37 @@ class _NassauWidgetState extends State<NassauWidget>
                                                       width: 70.0,
                                                       height: 40.0,
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
+                                                        color: valueOrDefault<
+                                                            Color>(
+                                                          () {
+                                                            if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Taxi')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Driver')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryText;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            }
+                                                          }(),
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
@@ -2343,9 +2844,31 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   fontSize:
                                                                       12.0,
                                                                   letterSpacing:
@@ -2365,10 +2888,37 @@ class _NassauWidgetState extends State<NassauWidget>
                                                       width: 70.0,
                                                       height: 40.0,
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
+                                                        color: valueOrDefault<
+                                                            Color>(
+                                                          () {
+                                                            if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Taxi')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Driver')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryText;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            }
+                                                          }(),
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
@@ -2394,9 +2944,31 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   fontSize:
                                                                       12.0,
                                                                   letterSpacing:
@@ -2416,10 +2988,37 @@ class _NassauWidgetState extends State<NassauWidget>
                                                       width: 70.0,
                                                       height: 40.0,
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
+                                                        color: valueOrDefault<
+                                                            Color>(
+                                                          () {
+                                                            if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Taxi')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Driver')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondaryText;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            }
+                                                          }(),
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
@@ -2445,9 +3044,31 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .alternate,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate,
+                                                                  ),
                                                                   fontSize:
                                                                       12.0,
                                                                   letterSpacing:
@@ -2522,8 +3143,33 @@ class _NassauWidgetState extends State<NassauWidget>
                                           width: 332.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
+                                            color: valueOrDefault<Color>(
+                                              () {
+                                                if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Taxi')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                } else if ((currentUserDocument
+                                                            ?.plaform
+                                                            .toList() ??
+                                                        [])
+                                                    .contains('Ride Driver')) {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondary;
+                                                } else {
+                                                  return FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary;
+                                                }
+                                              }(),
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                            ),
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(14.0),
                                               bottomRight:
@@ -2557,10 +3203,37 @@ class _NassauWidgetState extends State<NassauWidget>
                                                                   .bodyMedium
                                                                   .fontStyle,
                                                         ),
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
+                                                        color: valueOrDefault<
+                                                            Color>(
+                                                          () {
+                                                            if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Taxi')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .alternate;
+                                                            } else if ((currentUserDocument
+                                                                        ?.plaform
+                                                                        .toList() ??
+                                                                    [])
+                                                                .contains(
+                                                                    'Ride Driver')) {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primary;
+                                                            } else {
+                                                              return FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .alternate;
+                                                            }
+                                                          }(),
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                        ),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:

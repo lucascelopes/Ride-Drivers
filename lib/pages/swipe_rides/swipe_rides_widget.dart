@@ -1,6 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
+import '/components/bottom_shett_ligacao_widget.dart';
+import '/components/bottom_shett_mensagem_widget.dart';
+import '/components/bottom_shett_report_widget.dart';
 import '/components/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_swipeable_stack.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -255,8 +258,32 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                           maxHeight: 500.0,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: valueOrDefault<Color>(
+                                            () {
+                                              if ((currentUserDocument?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Taxi')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              } else if ((currentUserDocument
+                                                          ?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Driver')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .primary;
+                                              } else {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              }
+                                            }(),
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
+                                          ),
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                         ),
@@ -553,9 +580,34 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                       FontStyle
                                                                           .italic,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
                                                                 fontSize: 20.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -602,9 +654,38 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                             child: Icon(
                                                               Icons
                                                                   .fiber_manual_record,
-                                                              color: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .primary,
+                                                              color:
+                                                                  valueOrDefault<
+                                                                      Color>(
+                                                                () {
+                                                                  if ((currentUserDocument
+                                                                              ?.plaform
+                                                                              .toList() ??
+                                                                          [])
+                                                                      .contains(
+                                                                          'Ride Taxi')) {
+                                                                    return FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primary;
+                                                                  } else if ((currentUserDocument
+                                                                              ?.plaform
+                                                                              .toList() ??
+                                                                          [])
+                                                                      .contains(
+                                                                          'Ride Driver')) {
+                                                                    return FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .alternate;
+                                                                  } else {
+                                                                    return FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primary;
+                                                                  }
+                                                                }(),
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                              ),
                                                               size: 16.0,
                                                             ),
                                                           ),
@@ -663,9 +744,29 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                           .bodyMedium
                                                                           .fontStyle,
                                                                     ),
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primary,
+                                                                    color: valueOrDefault<
+                                                                        Color>(
+                                                                      () {
+                                                                        if ((currentUserDocument?.plaform.toList() ??
+                                                                                [])
+                                                                            .contains(
+                                                                                'Ride Taxi')) {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .primary;
+                                                                        } else if ((currentUserDocument?.plaform.toList() ??
+                                                                                [])
+                                                                            .contains('Ride Driver')) {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .alternate;
+                                                                        } else {
+                                                                          return FlutterFlowTheme.of(context)
+                                                                              .primary;
+                                                                        }
+                                                                      }(),
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
+                                                                    ),
                                                                     fontSize:
                                                                         15.0,
                                                                     letterSpacing:
@@ -755,9 +856,38 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                           child: Icon(
                                                             Icons
                                                                 .fiber_manual_record,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .primary,
+                                                            color:
+                                                                valueOrDefault<
+                                                                    Color>(
+                                                              () {
+                                                                if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Taxi')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary;
+                                                                } else if ((currentUserDocument
+                                                                            ?.plaform
+                                                                            .toList() ??
+                                                                        [])
+                                                                    .contains(
+                                                                        'Ride Driver')) {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .alternate;
+                                                                } else {
+                                                                  return FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary;
+                                                                }
+                                                              }(),
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .primary,
+                                                            ),
                                                             size: 16.0,
                                                           ),
                                                         ),
@@ -816,9 +946,31 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
+                                                                  color:
+                                                                      valueOrDefault<
+                                                                          Color>(
+                                                                    () {
+                                                                      if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Taxi')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      } else if ((currentUserDocument?.plaform.toList() ??
+                                                                              [])
+                                                                          .contains(
+                                                                              'Ride Driver')) {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .alternate;
+                                                                      } else {
+                                                                        return FlutterFlowTheme.of(context)
+                                                                            .primary;
+                                                                      }
+                                                                    }(),
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primary,
+                                                                  ),
                                                                   fontSize:
                                                                       15.0,
                                                                   letterSpacing:
@@ -1288,9 +1440,35 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                 width: 350.0,
                                                 height: 57.54,
                                                 decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
+                                                  color: valueOrDefault<Color>(
+                                                    () {
+                                                      if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Taxi')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      } else if ((currentUserDocument
+                                                                  ?.plaform
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(
+                                                              'Ride Driver')) {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .alternate;
+                                                      } else {
+                                                        return FlutterFlowTheme
+                                                                .of(context)
+                                                            .primary;
+                                                      }
+                                                    }(),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           16.0),
@@ -1301,29 +1479,139 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
                                                   children: [
-                                                    Container(
-                                                      width: 80.0,
-                                                      height: 38.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await showModalBottomSheet(
+                                                          isScrollControlled:
+                                                              true,
+                                                          backgroundColor:
+                                                              Colors
+                                                                  .transparent,
+                                                          enableDrag: false,
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return GestureDetector(
+                                                              onTap: () {
+                                                                FocusScope.of(
+                                                                        context)
+                                                                    .unfocus();
+                                                                FocusManager
+                                                                    .instance
+                                                                    .primaryFocus
+                                                                    ?.unfocus();
+                                                              },
+                                                              child: Padding(
+                                                                padding: MediaQuery
+                                                                    .viewInsetsOf(
+                                                                        context),
+                                                                child:
+                                                                    BottomShettLigacaoWidget(),
+                                                              ),
+                                                            );
+                                                          },
+                                                        ).then((value) =>
+                                                            safeSetState(
+                                                                () {}));
+                                                      },
+                                                      child: Container(
+                                                        width: 80.0,
+                                                        height: 38.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: valueOrDefault<
+                                                              Color>(
+                                                            () {
+                                                              if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Taxi')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              } else if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Driver')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary;
+                                                              } else {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              }
+                                                            }(),
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .alternate,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Text(
-                                                        'Call',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              font: GoogleFonts
-                                                                  .poppins(
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Text(
+                                                          'Call',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
+                                                                fontSize: 16.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -1332,43 +1620,142 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                               ),
-                                                              fontSize: 16.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
+                                                        ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      width: 86.0,
-                                                      height: 38.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await showModalBottomSheet(
+                                                          isScrollControlled:
+                                                              true,
+                                                          backgroundColor:
+                                                              Colors
+                                                                  .transparent,
+                                                          enableDrag: false,
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return GestureDetector(
+                                                              onTap: () {
+                                                                FocusScope.of(
+                                                                        context)
+                                                                    .unfocus();
+                                                                FocusManager
+                                                                    .instance
+                                                                    .primaryFocus
+                                                                    ?.unfocus();
+                                                              },
+                                                              child: Padding(
+                                                                padding: MediaQuery
+                                                                    .viewInsetsOf(
+                                                                        context),
+                                                                child:
+                                                                    BottomShettMensagemWidget(),
+                                                              ),
+                                                            );
+                                                          },
+                                                        ).then((value) =>
+                                                            safeSetState(
+                                                                () {}));
+                                                      },
+                                                      child: Container(
+                                                        width: 86.0,
+                                                        height: 38.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: valueOrDefault<
+                                                              Color>(
+                                                            () {
+                                                              if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Taxi')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              } else if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Driver')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary;
+                                                              } else {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              }
+                                                            }(),
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .alternate,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Text(
-                                                        'Message',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              font: GoogleFonts
-                                                                  .poppins(
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Text(
+                                                          'Message',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
+                                                                fontSize: 16.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -1377,43 +1764,142 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                               ),
-                                                              fontSize: 16.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
+                                                        ),
                                                       ),
                                                     ),
-                                                    Container(
-                                                      width: 80.0,
-                                                      height: 38.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await showModalBottomSheet(
+                                                          isScrollControlled:
+                                                              true,
+                                                          backgroundColor:
+                                                              Colors
+                                                                  .transparent,
+                                                          enableDrag: false,
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return GestureDetector(
+                                                              onTap: () {
+                                                                FocusScope.of(
+                                                                        context)
+                                                                    .unfocus();
+                                                                FocusManager
+                                                                    .instance
+                                                                    .primaryFocus
+                                                                    ?.unfocus();
+                                                              },
+                                                              child: Padding(
+                                                                padding: MediaQuery
+                                                                    .viewInsetsOf(
+                                                                        context),
+                                                                child:
+                                                                    BottomShettReportWidget(),
+                                                              ),
+                                                            );
+                                                          },
+                                                        ).then((value) =>
+                                                            safeSetState(
+                                                                () {}));
+                                                      },
+                                                      child: Container(
+                                                        width: 80.0,
+                                                        height: 38.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: valueOrDefault<
+                                                              Color>(
+                                                            () {
+                                                              if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Taxi')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              } else if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Driver')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary;
+                                                              } else {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              }
+                                                            }(),
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .alternate,
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                      ),
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Text(
-                                                        ' Report',
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              font: GoogleFonts
-                                                                  .poppins(
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                        ),
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Text(
+                                                          ' Report',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .poppins(
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                                ),
+                                                                color:
+                                                                    valueOrDefault<
+                                                                        Color>(
+                                                                  () {
+                                                                    if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Taxi')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    } else if ((currentUserDocument?.plaform.toList() ??
+                                                                            [])
+                                                                        .contains(
+                                                                            'Ride Driver')) {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .alternate;
+                                                                    } else {
+                                                                      return FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary;
+                                                                    }
+                                                                  }(),
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
+                                                                fontSize: 16.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
@@ -1422,18 +1908,7 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                               ),
-                                                              fontSize: 16.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
-                                                              fontStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                            ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ].divide(
@@ -1467,6 +1942,37 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                     .bodyMedium
                                                                     .fontStyle,
                                                           ),
+                                                          color: valueOrDefault<
+                                                              Color>(
+                                                            () {
+                                                              if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Taxi')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryBackground;
+                                                              } else if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Driver')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              } else {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryBackground;
+                                                              }
+                                                            }(),
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryBackground,
+                                                          ),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -1499,6 +2005,37 @@ class _SwipeRidesWidgetState extends State<SwipeRidesWidget> {
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
+                                                          ),
+                                                          color: valueOrDefault<
+                                                              Color>(
+                                                            () {
+                                                              if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Taxi')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary;
+                                                              } else if ((currentUserDocument
+                                                                          ?.plaform
+                                                                          .toList() ??
+                                                                      [])
+                                                                  .contains(
+                                                                      'Ride Driver')) {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .alternate;
+                                                              } else {
+                                                                return FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary;
+                                                              }
+                                                            }(),
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
                                                           ),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,

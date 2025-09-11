@@ -1086,8 +1086,32 @@ class _MyeWalletWidgetState extends State<MyeWalletWidget> {
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: valueOrDefault<Color>(
+                                            () {
+                                              if ((currentUserDocument?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Taxi')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              } else if ((currentUserDocument
+                                                          ?.plaform
+                                                          .toList() ??
+                                                      [])
+                                                  .contains('Ride Driver')) {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .primary;
+                                              } else {
+                                                return FlutterFlowTheme.of(
+                                                        context)
+                                                    .alternate;
+                                              }
+                                            }(),
+                                            FlutterFlowTheme.of(context)
+                                                .alternate,
+                                          ),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
@@ -1596,7 +1620,6 @@ class _MyeWalletWidgetState extends State<MyeWalletWidget> {
                                 width: MediaQuery.sizeOf(context).width * 0.88,
                                 height: 46.0,
                                 decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).primary,
                                   boxShadow: [
                                     BoxShadow(
                                       blurRadius: 4.0,
@@ -1607,6 +1630,57 @@ class _MyeWalletWidgetState extends State<MyeWalletWidget> {
                                       ),
                                     )
                                   ],
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      valueOrDefault<Color>(
+                                        () {
+                                          if ((currentUserDocument?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Taxi')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .primary;
+                                          } else if ((currentUserDocument
+                                                      ?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Driver')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .accent2;
+                                          } else {
+                                            return FlutterFlowTheme.of(context)
+                                                .primary;
+                                          }
+                                        }(),
+                                        FlutterFlowTheme.of(context).primary,
+                                      ),
+                                      valueOrDefault<Color>(
+                                        () {
+                                          if ((currentUserDocument?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Taxi')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .primary;
+                                          } else if ((currentUserDocument
+                                                      ?.plaform
+                                                      .toList() ??
+                                                  [])
+                                              .contains('Ride Driver')) {
+                                            return FlutterFlowTheme.of(context)
+                                                .accent3;
+                                          } else {
+                                            return FlutterFlowTheme.of(context)
+                                                .primary;
+                                          }
+                                        }(),
+                                        FlutterFlowTheme.of(context).primary,
+                                      )
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(-0.34, 1.0),
+                                    end: AlignmentDirectional(0.34, -1.0),
+                                  ),
                                   borderRadius: BorderRadius.circular(24.0),
                                 ),
                                 alignment: AlignmentDirectional(0.0, 0.0),
