@@ -23,12 +23,14 @@ import '/flutter_flow/lat_lng.dart' as ff;
 class NativeTurnByTurnNav extends StatelessWidget {
   const NativeTurnByTurnNav({
     super.key,
+    required this.apiKey,
     required this.userLatLng,
     required this.placeLatLng,
     required this.width,
     required this.height,
   });
 
+  final String apiKey;
   final ff.LatLng userLatLng;
   final ff.LatLng placeLatLng;
   final double width;
@@ -45,6 +47,7 @@ class NativeTurnByTurnNav extends StatelessWidget {
       'userLng': userLatLng.longitude,
       'destLat': placeLatLng.latitude,
       'destLng': placeLatLng.longitude,
+      'apiKey': apiKey,
     };
 
     if (defaultTargetPlatform == TargetPlatform.android) {
