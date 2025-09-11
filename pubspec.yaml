@@ -68,6 +68,10 @@ dependencies:
   google_fonts: 6.1.0
   google_generative_ai: ^0.4.6
   google_navigation_flutter: 0.6.4
+  google_maps_flutter: ^2.6.1
+  # opcionais mas úteis em CI:
+  google_maps_flutter_android: ^2.12.1
+  google_maps_flutter_ios: ^2.6.0
   google_sign_in: 6.3.0
   google_sign_in_android: 6.2.1
   google_sign_in_ios: 5.9.0
