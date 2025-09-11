@@ -51,23 +51,21 @@ class NativeTurnByTurnNav extends StatelessWidget {
       return SizedBox(
         width: width,
         height: height,
-        child: AndroidView(
-          viewType: 'NativeTurnByTurnNav',
-          layoutDirection: TextDirection.ltr,
-          creationParams: params,
-          creationParamsCodec: const StandardMessageCodec(),
-        ),
+          child: AndroidView(
+            viewType: 'NativeTurnByTurnNav',
+            creationParams: params,
+            creationParamsCodec: const StandardMessageCodec(),
+          ),
       );
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       return SizedBox(
         width: width,
         height: height,
-        child: UiKitView(
-          viewType: 'NativeTurnByTurnNav',
-          layoutDirection: TextDirection.ltr,
-          creationParams: params,
-          creationParamsCodec: const StandardMessageCodec(),
-        ),
+          child: UiKitView(
+            viewType: 'NativeTurnByTurnNav',
+            creationParams: params,
+            creationParamsCodec: const StandardMessageCodec(),
+          ),
       );
     }
 
