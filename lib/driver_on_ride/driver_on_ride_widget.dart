@@ -72,7 +72,7 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
     }
 
     return StreamBuilder<RideOrdersRecord>(
-      stream: RideOrdersRecord.getDocument(widget!.driverOrder!),
+      stream: RideOrdersRecord.getDocument(widget.driverOrder!),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return Scaffold(
@@ -103,9 +103,13 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
             backgroundColor: FlutterFlowTheme.of(context).tertiary,
             body: Stack(
               children: [
-                // Mapa "fantasma" do FlutterFlow (mantém compatibilidade/gestos se você precisar)
-                Opacity(
-                  opacity: 0.0,
+                // Mapa "fantasma" do FlutterFlow sem pintar nem criar layer.
+                // IMPORTANTE: evitar Opacity(opacity: 0) aqui.
+                Visibility(
+                  visible: false,
+                  maintainState: true,   // mantém controller/estado se você precisar
+                  maintainAnimation: true,
+                  maintainSize: false,   // não ocupa espaço, não pinta
                   child: FlutterFlowGoogleMap(
                     controller: _model.googleMapsController,
                     onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
@@ -127,7 +131,7 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                   ),
                 ),
 
-                // === AQUI entra o widget nativo ===
+                // === Mapa nativo ===
                 PointerInterceptor(
                   intercepting: isWeb,
                   child: AuthUserStreamWidget(
@@ -143,6 +147,9 @@ class _DriverOnRideWidgetState extends State<DriverOnRideWidget> {
                     ),
                   ),
                 ),
+
+                // (opcional) se quiser testar se algo está cobrindo o mapa:
+                // Positioned.fill(child: IgnorePointer(child: Container(color: Colors.transparent))),
               ],
             ),
           ),
